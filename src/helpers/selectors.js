@@ -24,16 +24,6 @@ for (const id of dayObj.interviewers) {
   appts.push(interviewer);
 }
 
-  // if (ids && ids.length > 0) {
-  //   const ids2 = ids[0].appointments;
-  //   for (let i = 0; i < ids2.length; i++) {
-  //     const val = state.appointments[ids2[i]];
-  //     if (val.interview) {
-  //       appts.push(val.interview);
-  //     }
-  //   }
-  // }
-  // console.log(appts);
   return appts;
 }
 
