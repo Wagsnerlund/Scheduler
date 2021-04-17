@@ -12,18 +12,16 @@ export function getAppointmentsForDay(state, day) {
 
 export function getInterviewersForDay(state, day) {
   let appts = [];
-  // find the day
   const dayObj = state.days.find(x => x.name === day);
 
   if (!dayObj || !dayObj.interviewers.length) {
     return [];
   }
 
-for (const id of dayObj.interviewers) {
-  const interviewer = state.interviewers[id];
-  appts.push(interviewer);
-}
-
+  for (const id of dayObj.interviewers) {
+    const interviewer = state.interviewers[id];
+    appts.push(interviewer);
+  }
   return appts;
 }
 

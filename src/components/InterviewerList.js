@@ -5,7 +5,6 @@ import "components/InterviewerList.scss";
 import "components/InterviewerListItem.scss";
 
 export default function InterviewerList(props) {
-  console.log("hello", props);
   return (
     <section className={props.interviewers}>
       <h4 className="interviewers__header text--light">Interviewer</h4>
