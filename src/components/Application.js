@@ -124,16 +124,20 @@ export default function Application(props) {
   }
 
   function cancelInterview(id) {
-
+    const appointment = {
+      ...state.appointments[id],
+      interview: null
+    };
+    const appointments = {
+      ...state.appointments,
+      [id]: appointment
+    };
+    setState({ ...state, appointments});
   }
-
-  // If we break this down into steps similar to our previous activity, we should start by creating the main cancelInterview function in Application.js, that will use the appointment id to find the right appointment slot and set it's interview data to null.
 
   const dailyAppointments = getAppointmentsForDay(state, state.day);
   const dailyInterviewers = getInterviewersForDay(state, state.day);
   const setDay = day => setState({ ...state, day });
-
-  // const setDays = days => setState(prev => ({ ...prev, days }));
 
   useEffect(() => {
     Promise.all([
@@ -175,6 +179,7 @@ export default function Application(props) {
             interview={getInterview(state, appointment.interview)}
             interviewers={dailyInterviewers}
             bookInterview={bookInterview}
+            cancelInterview={cancelInterview}
           />
         ))}
         <Appointment

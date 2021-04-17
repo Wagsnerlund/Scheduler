@@ -17,7 +17,6 @@ export default function Form(props) {
   }
 
   const save = function () {
-    console.log(props);
     props.onSave(name, interviewer);
   }
  
@@ -32,7 +31,6 @@ export default function Form(props) {
             placeholder="Enter Student Name"
             value={name}
             onChange={e => setName(e.target.value)}
-            // onSave={e => console.log(e.target)}
             onSubmit={event => event.preventDefault()}
           />
         </form>
