@@ -24,7 +24,7 @@ const ERROR_DELETE = "ERROR_DELETE";
 
 
 export default function Appointment(props) {
-
+console.log("props", props);
   function save(name, interviewer) {
     const interview = {
       student: name,
@@ -32,19 +32,14 @@ export default function Appointment(props) {
     };
     transition(SAVING);
     props.bookInterview(props.id, interview)
-    axios.put(`/api/appointments/${props.id}`, { interview: interview })
       .then(() => transition(SHOW))
       .catch(error => transition(ERROR_SAVE, true));
   }
 
   function deleteAppt() {
     transition(DELETE, true);
-
-    axios.delete(`/api/appointments/${props.id}`)
-      .then(() => {
-        props.cancelInterview(props.id)
-        transition(EMPTY)
-      })
+    props.cancelInterview(props.id)
+      .then(() => transition(EMPTY))
       .catch(error => transition(ERROR_DELETE, true));
   }
 
