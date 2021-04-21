@@ -120,9 +120,6 @@ describe("Form", () => {
 
     await waitForElement(() => getByText(container, "Archie Cohen"));
 
-    // const day = getAllByTestId(container, "day").find(day => queryByText(day, "Monday"));
-    // expect(getByText(day, "1 spot remaining")).toBeInTheDocument();
-
     const appointment = getAllByTestId(container, "appointment").find(appointment => queryByText(appointment, "Archie Cohen"));
 
     fireEvent.click(getByAltText(appointment, "Delete"));

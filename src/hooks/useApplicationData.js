@@ -57,8 +57,6 @@ export default function useApplicationData() {
     interviewers: []
   });
 
-  //------------------------------------------
-
   const getSpotsForDay = function (dayObj, appointments) {
 
     let spots = 0;
@@ -88,8 +86,6 @@ export default function useApplicationData() {
 
     return newDays;
   };
-
-  //------------------------------------------
 
   function bookInterview(id, interview) {
 
