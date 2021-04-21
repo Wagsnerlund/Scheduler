@@ -10,49 +10,49 @@ export default function useApplicationData() {
     day: "Monday",
     days: [],
     appointments: [{
-        id: 1,
-        time: "12pm",
-      },
-      {
-        id: 2,
-        time: "1pm",
-        interview: {
-          student: "Lydia Miller-Jones",
-          interviewer: {
-            id: 1,
-            name: "Sylvia Palmer",
-            avatar: "https://i.imgur.com/LpaY82x.png",
-          }
+      id: 1,
+      time: "12pm",
+    },
+    {
+      id: 2,
+      time: "1pm",
+      interview: {
+        student: "Lydia Miller-Jones",
+        interviewer: {
+          id: 1,
+          name: "Sylvia Palmer",
+          avatar: "https://i.imgur.com/LpaY82x.png",
         }
-      },
-      {
-        id: 3,
-        time: "2pm",
-        interview: {
-          student: "Chelsea Wagner",
-          interviewer: {
-            id: 2,
-            name: "Tori Malcom",
-            avatar: "https://i.imgur.com/Nmx0Qxo.png",
-          }
-        }
-      },
-      {
-        id: 4,
-        time: "3pm",
-        interview: {
-          student: "Ryan Rice",
-          interviewer: {
-            id: 5,
-            name: "Sven Jones",
-            avatar: "https://i.imgur.com/twYrpay.jpg",
-          }
-        }
-      },
-      {
-        id: 5,
-        time: "4pm",
       }
+    },
+    {
+      id: 3,
+      time: "2pm",
+      interview: {
+        student: "Chelsea Wagner",
+        interviewer: {
+          id: 2,
+          name: "Tori Malcom",
+          avatar: "https://i.imgur.com/Nmx0Qxo.png",
+        }
+      }
+    },
+    {
+      id: 4,
+      time: "3pm",
+      interview: {
+        student: "Ryan Rice",
+        interviewer: {
+          id: 5,
+          name: "Sven Jones",
+          avatar: "https://i.imgur.com/twYrpay.jpg",
+        }
+      }
+    },
+    {
+      id: 5,
+      time: "4pm",
+    }
     ],
     interviewers: []
   });
@@ -108,11 +108,7 @@ export default function useApplicationData() {
 
         const days = updateSpots(state.day, state.days, appointments);
 
-        setState({
-          ...state,
-          appointments,
-          days
-        });
+        setState({ ...state, appointments, days });
       })
   }
 
@@ -131,16 +127,9 @@ export default function useApplicationData() {
 
         const days = updateSpots(state.day, state.days, appointments);
 
-        setState({
-          ...state,
-          appointments,
-          days
-        })
-
+        setState({ ...state, appointments, days })
       });
   }
-
-
 
   const setDay = day => setState({
     ...state,
