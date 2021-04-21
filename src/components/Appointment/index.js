@@ -10,7 +10,6 @@ import Error from "components/Appointment/Error";
 import "components/Application"
 import "components/Appointment/styles.scss";
 import useVisualMode from "hooks/useVisualMode";
-import axios from 'axios';
 
 const EMPTY = "EMPTY";
 const SHOW = "SHOW";
@@ -48,7 +47,10 @@ export default function Appointment(props) {
   );
 
   return (
-    <article className="appointment">
+    <article
+      className="appointment"
+      data-testid="appointment">
+
       <Header
         time={props.time}
       />

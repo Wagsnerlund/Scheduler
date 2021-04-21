@@ -160,7 +160,7 @@ storiesOf("Appointment", module)
   .add("Deleting", () => <Deleting message="Deleting" />)
   .add("Error", () => (
     <Error
-      message="Could not delete appointment."
+      message="Could not cancel appointment."
       onClose={action("onClose")}
     />))
   .add("Edit", () => (
