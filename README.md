@@ -4,43 +4,21 @@ Interview Scheduler is a simple, single-page appointment maker. Users are able t
 
 ## Final Product
 
-!["Screenshot of the root page showing the toggling of days."](https://github.com/Wagsnerlund/scheduler/blob/master/docs/appointment-add.png?raw=true)
-!["Screenshot of the addition of an appointment."](https://github.com/Wagsnerlund/scheduler/blob/master/docs/appointment-form.png?raw=true)
-!["Screenshot of the root page with the new appointment."](https://github.com/Wagsnerlund/scheduler/blob/master/docs/appointment-show.png?raw=true)
-!["Screenshot of the appointment to be deleted."](https://github.com/Wagsnerlund/scheduler/blob/master/docs/appointment-delete.png?raw=true)
+!["Screenshot of the root page and effects during toggling of days."](https://github.com/Wagsnerlund/scheduler/blob/master/docs/appointments-add.png?raw=true)
+!["Screenshot of the addition of an appointment."](https://github.com/Wagsnerlund/scheduler/blob/master/docs/appointments-form.png?raw=true)
+!["Screenshot of the root page with the new appointment."](https://github.com/Wagsnerlund/scheduler/blob/master/docs/appointments-show.png?raw=true)
+!["Screenshot of the appointment to be deleted."](https://github.com/Wagsnerlund/scheduler/blob/master/docs/appointments-delete.png?raw=true)
 
 ## Getting Started
 
 1. Install dependencies using the `npm install` command.
-2. Run the webpack development server using the `npm start` command. The app will be served at <http://localhost:8080/>.
+2. Run the webpack development server using the `npm start` command. The app will be served at <http://localhost:8000/>.
 3. Run the jest test framework using the `npm test` command.
-4. Go to <http://localhost:8080/> in your browser.
+4. Run the storybook visual testbed using the `npm run storybook` command.
+5. Go to <http://localhost:8000/> in your browser.
 
 ## Dependencies
 
-- Express
-- Node 5.10.x or above
-- body-parser
-- chance
-
-## Setup
-
-Install dependencies with `npm install`.
-
-## Running Webpack Development Server
-
-```sh
-npm start
-```
-
-## Running Jest Test Framework
-
-```sh
-npm test
-```
-
-## Running Storybook Visual Testbed
-
-```sh
-npm run storybook
-```
+- axios
+- @testing-library/react-hooks
+- react-test-renderer
